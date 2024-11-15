@@ -55,7 +55,9 @@
     "poetry",
     "pyenv",
     "runtime-version",
-    "setup-cfg"
+    "setup-cfg",
+    "gomod",
+    "ocb"
   ],
   "tekton": {
     "fileMatch": [
@@ -96,9 +98,7 @@
     ]
   },
   "dockerfile": {
-    "enabled": true,
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
+    "enabled": true
   },
   "rpm": {
     "enabled": true,
@@ -109,153 +109,19 @@
         "commitMessageTopic": "RPM updates",
         "matchManagers": ["rpm"]
       }
-    ],
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
+    ]
   },
   "git-submodules": {
-    "enabled": true,
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
-  "argocd": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
-  "crossplane": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
-  "fleet": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
-  "flux": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
-  "helm-requirements": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
-  "helm-values": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
-  "helmfile": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
-  "helmsman": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
-  "helmv3": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
-  "jsonnet-bundler": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
-  "kubernetes": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
-  "kustomize": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
-  "asdf": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
-  "fvm": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
-  "hermit": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
-  "homebrew": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
+    "enabled": true
   },
   "nix": {
-    "enabled": true,
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
-  "osgi": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
+    "enabled": true
   },
   "pre-commit": {
-    "enabled": true,
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
+    "enabled": true
   },
-  "vendir": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
-  "terraform": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
-  "terraform-version": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
-  "terragrunt": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
-  "terragrunt-version": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
-  "tflint-plugin": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
-  "pep621": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
-  "pip-compile": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
-  "pip_requirements": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
-  "pip_setup": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
-  "pipenv": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
-  "poetry": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
-  "pyenv": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
-  "runtime-version": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
-  "setup-cfg": {
-    "additionalBranchPrefix": "{{baseBranch}}/",
-    "branchPrefix": "konflux/mintmaker/"
-  },
+  "additionalBranchPrefix": "{{baseBranch}}/",
+  "branchPrefix": "konflux/mintmaker/",
   "forkProcessing": "enabled",
   "allowedPostUpgradeCommands": ["^rpm-lockfile-prototype rpms.in.yaml$"],
   "dependencyDashboard": false
